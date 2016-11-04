@@ -1,0 +1,8 @@
+FROM postgres:latest
+
+ENV POSTGRES_USER benchmarkdbuser
+ENV POSTGRES_PASSWORD benchmarkdbpass
+ENV POSTGRES_DB hello_world
+
+ADD max_connections.sh /docker-entrypoint-initdb.d/
+ADD https://raw.githubusercontent.com/TechEmpower/FrameworkBenchmarks/master/config/create-postgres.sql /docker-entrypoint-initdb.d/

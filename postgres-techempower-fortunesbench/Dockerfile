@@ -8,6 +8,7 @@ RUN chmod +x /fortunesbench.sh
 ADD fortunes.sql /
 
 ENV PGBENCH_HOST localhost
+ENV PGBENCH_TIME 10
 ENV PGBENCH_THREADS 12
 ENV PGBENCH_CONNECTIONS 96
 

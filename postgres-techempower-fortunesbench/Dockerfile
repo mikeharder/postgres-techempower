@@ -1,4 +1,4 @@
-from postgres
+FROM postgres
 
 RUN apt-get update && apt-get install -y --no-install-recommends expect && rm -rf /var/lib/apt/lists/*
 
